@@ -200,6 +200,7 @@ def import_mat():
             print(tex)
             mat.albedo.setField("Albedo Map", mset.Texture(img_path))
         selected_object.getChildren()[len(pmx.Materials) - 1 - i].material = mat
+        selected_object.getChildren()[len(pmx.Materials) - 1 - i].name = "submesh_{}".format(i)
     mset.shutdownPlugin()
 
 def fuck():
